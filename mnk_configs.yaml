@@ -1,0 +1,15 @@
+m: 3
+n: 3
+k: 3
+rollouts: 0
+mcts_alpha: 1
+
+num_games: 1
+x_strat: 0    # 0: RANDOM, 1: Alpha Beta Search, 2: MCTS 
+y_strat: 0    # 0: RANDOM, 1: Alpha Beta Search, 2: MCTS 
+
+verbose: True
+
+# IGNORE / DO NOT MODIFY
+hydra/hydra_logging: none
+hydra/job_logging: none
