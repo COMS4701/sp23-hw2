@@ -3,6 +3,7 @@ from omegaconf import DictConfig
 import numpy as np
 
 import hw2.mnk_game as mnk
+from hw2.utils import GameStrategy
 
 @hydra.main(config_path='.', config_name="mnk_configs")
 def main(configs: DictConfig):
@@ -14,8 +15,8 @@ def main(configs: DictConfig):
     alpha = configs.mcts_alpha
 
     num_games = configs.num_games
-    Xstrat = configs.x_strat
-    Ostrat = configs.y_strat
+    Xstrat = GameStrategy(configs.x_strat)
+    Ostrat = GameStrategy(configs.y_strat)
     print_result = configs.verbose
 
     state = np.full((m, n), ".")
