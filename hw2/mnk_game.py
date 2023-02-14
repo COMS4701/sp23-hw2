@@ -180,7 +180,7 @@ def game_loop(
 
         if strategy == GameStrategy.RANDOM:
             state = random.choice(successors(state, current))
-        elif strategy == 1:
+        elif strategy == GameStrategy.ABS:
             _, state = ABS(state, current, k)
         else:
             state = MCTS(state, current, k, rollouts, mcts_alpha)
